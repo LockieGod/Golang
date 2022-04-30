@@ -49,7 +49,7 @@ func Decode(reader *bufio.Reader) (string, error) {
 	}
 	return string(pack[4:]), nil
 }
-
+///《服务端
 func server() {
 	///<1 本地端口启动服务
 	server, err := net.Listen("tcp", "127.0.0.1:10000")
@@ -82,7 +82,7 @@ func server() {
 		}(conn)
 	}
 }
-
+//<客户端
 func client() {
 	conn, err := net.Dial("tcp", "127.0.0.1:10000")
 	if err != nil {
